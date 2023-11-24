@@ -24,7 +24,7 @@ export const CountryList = () => {
     return (
       <Styled.Country>
         <img src={flagSrc} alt={`${shortName}`} />
-        <h1>{name} (Population: {population})</h1>
+        <h1>{name} (Population: {population.toLocaleString()})</h1>
         <VerticalDivider />
         <Styled.CurrencyBox>
           {currencies.map((currency) => {
