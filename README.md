@@ -1,8 +1,6 @@
-## Frontend
+This is a frontend client meant to be used with the server repository which can be found [here](https://github.com/FrostemanNeogard/CountryLookupBackend).
 
-The frontend client for this project was made with React and Typescript with the help of Vite.
-
-Packages used for the frontend client:
+Packages used for this frontend client:
 - sass
 - styled-components
 - react-router-dom
