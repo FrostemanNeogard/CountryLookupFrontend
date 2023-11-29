@@ -27,8 +27,8 @@ export const CountryList = () => {
         <h1>{name} (Population: {population.toLocaleString()})</h1>
         <VerticalDivider />
         <Styled.CurrencyBox>
-          {currencies.map((currency) => {
-            return <h1>{currency.name}: {calculateCurrency(sekValue, currency.conversionRate)}</h1>
+          {currencies.map((currency, index) => {
+            return <h1 key={index}>{currency.name}: {calculateCurrency(sekValue, currency.conversionRate)}</h1>
           })}
         </Styled.CurrencyBox>
         <Styled.RemoveButton onClick={() => removeCountry(index)}>
