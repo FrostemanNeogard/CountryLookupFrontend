@@ -35,8 +35,13 @@ export const Input = styled.input`
 	border-radius: ${({ theme }) => theme.borders.primaryRadius};
 `;
 
-export const FormButton = styled.button`
+export const FormButton = styled.button<{ $isDisabled?: boolean }>`
 	border: none;
 	border-radius: ${({ theme }) => theme.borders.primaryRadius};
 	padding: 1em;
+	&:hover {
+		${(props) =>
+			props.$isDisabled
+				? `cursor: auto !important;`
+				: `cursor: pointer !important;`}
 `;
