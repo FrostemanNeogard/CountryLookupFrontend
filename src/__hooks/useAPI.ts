@@ -1,4 +1,6 @@
-export const useAPI = async (endpoint: string, authToken: string, params?: {}) => {
+import { API_URL } from "../config";
+
+export const useAPI = async (endpoint: string, authToken: string) => {
   const API_URL: URL | undefined = getURL(endpoint);
 
   if (!API_URL) {
@@ -16,7 +18,7 @@ export const useAPI = async (endpoint: string, authToken: string, params?: {}) =
 }
 
 function getURL(endpointName: string) {
-  const BASE_API_URL = new URL(import.meta.env.VITE_API_URL)
+  const BASE_API_URL = new URL(API_URL)
   BASE_API_URL.pathname += endpointName;
   return BASE_API_URL
 }
