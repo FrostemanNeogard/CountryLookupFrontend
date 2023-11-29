@@ -63,6 +63,7 @@ export const LoginPage = () => {
 					type="button"
 					disabled={isLoading}
 					onClick={() => handleLogin(usernameValue, passwordValue)}
+					$isDisabled={isLoading}
 				>
 					Login
 				</Styled.FormButton>
